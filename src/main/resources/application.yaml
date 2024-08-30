@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: assessment
+  datasource:
+    url: jdbc:h2:mem:logging
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # only for testing purposes
+    database: H2
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org.springframework: INFO
+    com.giftandgo.assessment: DEBUG
+
+features:
+  file-upload-skip-validation: ${FEATURE_FILE_UPLOAD_SKIP_VALIDATION:false}
